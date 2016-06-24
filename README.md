@@ -1,2 +1,2 @@
-# Elo
-Now predict your performance reliably before you compete.
+# Elo V1.0
+[To be updated soon]
