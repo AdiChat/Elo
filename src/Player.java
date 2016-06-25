@@ -1,18 +1,28 @@
 import java.util.*;
+/*
+ * Current status:
+ * Player can play multiple games
+ * Player will have any initial rating before playing the current set of games
+ * Player will have a current rating
+ * For every game, outcome of the game for player will either be win, loss or draw.
+ * 
+ */
 class Player
 {
     private String username;
-    private ArrayList<int> gamesPlayed;
+    private ArrayList<Game> gamesPlayed;
+    private double initialRating;
     private double currentRating;
-    private ArrayList<double> newRating;
-    private ArrayList<int> gameStatus;
+    private ArrayList<Double> newRating;
+    private ArrayList<Integer> gameStatus;
     
     Player()
     {
         gamesPlayed = new ArrayList<Game>();
-        newRating = new ArrayList<double>();
-        gameStatus = new ArrayList<int>();
+        newRating = new ArrayList<Double>();
+        gameStatus = new ArrayList<Integer>();
         currentRating = 0.0;
+        initialRating = 0.0;
         username = "";
     }
     
@@ -21,7 +31,7 @@ class Player
         return username;
     }
     
-    public ArrayList<int> getGamesPlayed()
+    public ArrayList<Game> getGamesPlayed()
     {
         return gamesPlayed;
     }
@@ -29,6 +39,11 @@ class Player
     public double getCurrentRating()
     {
         return currentRating;
+    }
+    
+    public double getInitialRating()
+    {
+        return initialRating;
     }
     
     public double getNewRating(int i)
@@ -46,7 +61,33 @@ class Player
         System.out.println("Enter user data for user "+userId);
         Scanner sc = new Scanner(System.in);
         this.username = "AdiChat";
-        this.currentRating = sc.nextDouble();
+        //this.currentRating = sc.nextDouble();
     }
     
+    public void setUsername( String username)
+    {
+        this.username = username;
+    }
+    
+    private void addGame(Game game)
+    {
+        gamesPlayed.add(game);
+    }
+    
+    private void addRating(double rating)
+    {
+        currentRating = rating;
+    }
+    
+    public void addGameRating(Game game, double rating)
+    {
+        addGame(game);
+        addRating(rating);
+    }
+    
+    public void setCurrentRating()
+    {
+        // Result of other values - no user input
+    }
+        
 }
