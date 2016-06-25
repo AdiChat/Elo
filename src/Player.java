@@ -2,7 +2,7 @@
 class Player
 {
     private String username;
-    private LinkedList<Game> games;
+    private ArrayList<Game> games;
     private int gamesPlayed;
     private double rating;
     private int playerStatus;
