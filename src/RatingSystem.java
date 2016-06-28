@@ -1,7 +1,7 @@
 class RatingSystem
 {
     // For 2 player game
-    public static void setRate(int won, Player p1, Player p2)
+    public static void setRate(int won, Player p1, Player p2) // Following Elo rating system
     {
         double r1 = p1.getCurrentRating();
         double r2 = p2.getCurrentRating();
