@@ -21,8 +21,8 @@ class Player
         gamesPlayed = new ArrayList<Game>();
         newRating = new ArrayList<Double>();
         gameStatus = new ArrayList<Integer>();
-        currentRating = 0.0;
-        initialRating = 0.0;
+        currentRating = 1500.0;
+        initialRating = 1500.0;
         username = "";
     }
     
